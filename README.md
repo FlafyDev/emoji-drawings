@@ -38,13 +38,30 @@ Copy the contents of the file `emoji_drawings_tfds_builder.py` into a code block
 ### Usage
 Then you'll be able to use Emoji Drawings as a tfds dataset:
 ```py
+import tensorflow_datasets as tfds
+
+# Load dataset
 (ds_train, ds_valid, ds_test), ds_info = tfds.load(
-    'emoji_dataset',
+    'emoji_drawings',
     split = ["train[:80%]", "train[80%:90%]", "train[90%:]"],
     shuffle_files=True,
     as_supervised=True,
     with_info=True
 )
+
+# Print random examples
+import matplotlib.pyplot as plt # Plotting library
+ds_train = ds_train.shuffle(ds_info.splits['train'].num_examples)
+i = 0
+fig, ax = plt.subplots(1, 8)
+plt.subplots_adjust(left=50, bottom=None, right=52, top=None, wspace=None, hspace=None)
+for image, label in ds_train.take(8):
+    ax[i].axis('off')
+    ax[i].set_title(f"{label}: {EmojiDrawings.emoji_names[label]}", fontdict={"fontsize": 8})
+    ax[i].imshow(image)
+    i += 1
+
+plt.show()
 ```
 
 ###### [More info for how to load custom tfds datasets](https://www.tensorflow.org/datasets/add_dataset#tldr)

@@ -48,6 +48,7 @@ import tensorflow_datasets as tfds
     as_supervised=True,
     with_info=True
 )
+emoji_names = ds_info.features['label'].names
 
 # Print random examples
 import matplotlib.pyplot as plt # Plotting library
@@ -57,7 +58,7 @@ fig, ax = plt.subplots(1, 8)
 plt.subplots_adjust(left=50, bottom=None, right=52, top=None, wspace=None, hspace=None)
 for image, label in ds_train.take(8):
     ax[i].axis('off')
-    ax[i].set_title(f"{label}: {EmojiDrawings.emoji_names[label]}", fontdict={"fontsize": 8})
+    ax[i].set_title(f"{label}: {emoji_names[label]}", fontdict={"fontsize": 8})
     ax[i].imshow(image)
     i += 1
 

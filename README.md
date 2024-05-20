@@ -82,7 +82,7 @@ plt.show()
 | 7  | ❤️ | heart | <p align="center"><img src="./images/7-shalev-1705996335618.png" width="70" height="70" /></p>
 | 8  | 😡 | pouting-face | <p align="center"><img src="./images/8-wakatta-1706010757359.png" width="70" height="70" /></p>
 | 9  | 🤨 | raised-eyebrow | <p align="center"><img src="./images/9-wakatta-1706049142874.png" width="70" height="70" /></p>
-| 10 | 🤨 | relieved-face | <p align="center"><img src="./images/10-shalev-1705829852673.png" width="70" height="70" /></p>
+| 10 | 😌 | relieved-face | <p align="center"><img src="./images/10-shalev-1705829852673.png" width="70" height="70" /></p>
 | 11 | 😋 | savoring-food | <p align="center"><img src="./images/11-shalev-1705916445226.png" width="70" height="70" /></p>
 | 12 | 😍 | smiling-heart | <p align="center"><img src="./images/12-shalev-1705920124671.png" width="70" height="70" /></p>
 | 13 | 😈 | smiling-horns | <p align="center"><img src="./images/13-shalev-1705827136626.png" width="70" height="70" /></p>
